@@ -1,4 +1,4 @@
-package cn.tedu.sp01.pojo;
+package com.tedu.sp01.pojo;
 
 import java.util.List;
 

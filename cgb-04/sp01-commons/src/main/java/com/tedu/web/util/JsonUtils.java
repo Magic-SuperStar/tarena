@@ -1,4 +1,4 @@
-package cn.tedu.web.util;
+package com.tedu.web.util;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,8 +1,8 @@
-package cn.tedu.sp01.service;
+package com.tedu.sp01.service;
+
+import com.tedu.sp01.pojo.Item;
 
 import java.util.List;
-
-import cn.tedu.sp01.pojo.Item;
 
 public interface ItemService {
     List<Item> getItems(String orderId);

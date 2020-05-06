@@ -1,4 +1,4 @@
-package cn.tedu.web.util;
+package com.tedu.web.util;
 
 import lombok.Getter;
 import lombok.Setter;
