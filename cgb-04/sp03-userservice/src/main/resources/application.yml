@@ -8,3 +8,10 @@ spring:
 
 server:
   port: 8101
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30 #心跳间隔时间，默认30秒
+  client:
+    registry-fetch-interval-seconds: 30 #拉取注册信息间隔时间，默认30秒
+    service-url:
+      defaultZone: http://eureka1:2001/eureka
