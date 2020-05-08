@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.tedu.sp09.client.hystrix.*;
 
 /**
  * Created by LJZ.
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Time: 19:40
  * To change this template use File | Settings | File Templates.
  */
-@FeignClient(name = "user-service")
+@FeignClient(name = "user-service",fallback = UserFeignClientImpl.class)
 public interface UserFeignClient {
     @GetMapping("/{userId}")
     JsonResult<User> getUser(Integer userId);
