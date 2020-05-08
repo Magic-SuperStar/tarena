@@ -19,3 +19,8 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500 #此设置一般应大于ribbon 的重试超时时长，例如 10秒
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream #'*'代表所有数据参数接口暴露，可以指定端点名，来暴露监控端点
