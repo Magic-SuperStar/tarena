@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import com.tedu.sp09.client.hystrix.*;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
  * Time: 19:27
  * To change this template use File | Settings | File Templates.
  */
-@FeignClient(name = "item-service")
+@FeignClient(name = "item-service",fallback = ItemFeignClientImpl.class)
 public interface ItemFeignClient {
     @GetMapping("/{orderId}")
     JsonResult<List<Item>> getItems(@PathVariable String orderId);
