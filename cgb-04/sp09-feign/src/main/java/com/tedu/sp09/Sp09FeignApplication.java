@@ -12,5 +12,4 @@ public class Sp09FeignApplication {
     public static void main(String[] args) {
         SpringApplication.run(Sp09FeignApplication.class, args);
     }
-
 }
